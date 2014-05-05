@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Felipe Kuninory Akitaya">
+        <meta name="keywords" content="Trabalho C Felipe Kuninory Akitaya" />
+        <meta name="description" content="Trabalho C do Felipe Kuninory Akitaya" />
+        <title>Trabalho C - 110230</title>
+        <script type="text/javascript" src="Scripts/jquery.js"></script>
+        <link href="Css/StyleTrabalhoC.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            $(function() {
+
+                wrappador();
+/*
+                $('#caixaTeste').keyup(function() {
+                    wrappador();
+                });
+*/
+                // bind to each span
+                $('p span').hover(
+                        function() {
+                            $('#word').text($(this).css('background-color', '#ffff66').text());
+                        },
+                        function() {
+                            $('#word').text('');
+                            $(this).css('background-color', '');
+                        }
+                );
+            });
+
+            function wrappador() {
+                // wrap words in spans
+                $('p').each(function() {
+                    var $this = $(this);
+                    var $teste= "";
+                    var $array;
+                    $teste= ($this.text().replace(/\b(\w+)\b/g, "-$1"));
+                    $array = $teste.split("-");
+                    alert($array);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <p>Each word will be wrapped in a span.</p>
+            <p>A second paragraph here.</p>
+            <br/>
+            <br/>
+            <textarea id="caixaTeste">a a a a a a a </textarea>
+            Word: <span id="word"></span>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Felipe Kuninory Akitaya">
+        <meta name="keywords" content="Trabalho C Felipe Kuninory Akitaya" />
+        <meta name="description" content="Trabalho C do Felipe Kuninory Akitaya" />
+        <title>Trabalho C - 110230</title>
+        <script type="text/javascript" src="Scripts/jquery.js"></script>
+        <link href="Css/StyleTrabalhoC.css" rel="stylesheet" type="text/css">
+        <script>
+            function textbox()
+            {
+                var ctl = document.getElementById('Javascript_example');
+                var startPos = ctl.selectionStart;
+                var endPos = ctl.selectionEnd;
+                alert(startPos + ", " + endPos);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <textarea id="Javascript_example" onclick="textbox()">
+aaaaa
+            </textarea>
+        </div>
+    </body>
+</html>
